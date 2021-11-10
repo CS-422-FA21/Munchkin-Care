@@ -1,0 +1,140 @@
+body { text-align:center; }
+
+h1 {
+    font-size: 70px;
+    float: center;
+    padding: 20px;
+    color: rgba(134,21,174,1);
+    text-align: center; 
+}
+
+#container { display: flex; }
+
+/**************************/
+/* Parent's Information */
+
+#parentProfile {
+    float: left;
+    padding: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 30px;
+    text-align: center;
+    width: 400px;
+    height: 600px;
+}
+
+#parentImage {
+    width: 250px;
+    height: 250px;
+    top: 200px;
+    left: 80px;
+    border-radius: 50%;
+    border: 2px solid rgba(134,21,174,1);
+} 
+
+#parentinfo {
+    align-items: center;
+    text-align: center;
+}
+
+#rating {
+    font-size: 20px;
+    align-items: center;
+    color: yellow;
+}
+
+#numRatings {
+    font-size: 22px;
+    color: royalblue;
+}
+
+#parentContact {
+    padding: 20px;
+    font-size: 20px;
+}
+
+[class|="bi bi-star"]       { text-shadow: 0 0 3px #000; }
+[class="bi bi-telephone"]   { color: purple; }
+[class="bi bi-envelope"]    { color: purple; }
+
+/**************************/
+/* Children's Information */
+
+#childProfiles {
+    float: center;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 30px;
+    text-align: center;
+}
+
+#childImage {
+    width: 250px;
+    height: 250px;
+    top: 200px;
+    left: 100px;
+    border-radius: 50%;
+}
+
+[id|="child"] {
+    padding: 20px;
+    float: auto; 
+    font-size: 25px;
+    text-align: center;
+    width: 350px;
+    height: 600px;
+    background-color: rgb(233, 201, 243);
+    border-radius: 20px;
+}
+
+#child-1 { margin-right: 20px; }
+#child-2 { margin-left: 20px; }
+
+#childinfo > div {
+    padding: 30px;
+    text-align: left;
+}
+
+#childinfo > div > li { 
+    font-size: 20px;
+}
+
+/**************************/
+/* Additional Information */
+
+#additionalInfo {
+    float: right;
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    font-size: 25px;
+    color: rgba(134,21,174,1);
+    text-align: left;
+    width: 350px;
+    height: 500px;
+}
+
+#additionalInfo > h3 { text-align: center; }
+#additionalInfo > li { color: rgb(206, 131, 231); }
+
+#en_flag { 
+    width: 30px;
+    height: 25px;
+}
+#sa_flag { 
+    width: 30px;
+    height: 25px;
+}
+
+#addChild {
+    font-size: 20px;
+    padding: 10px;
+    margin: 20px;
+    align-self: center;
+    background-color: rgb(206, 131, 231);
+    border-color: transparent;
+    border-radius: 15px;
+}
