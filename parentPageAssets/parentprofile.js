@@ -9,3 +9,8 @@ function closeForm() {
 function errorPage() {
     window.open("mainFrameTasks.html", "_self");
 }
+
+function overheadPopup(){
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
