@@ -1,9 +1,12 @@
-body { text-align:center; }
+body { 
+    text-align: center; 
+    font-family: "Crafty Girls"; 
+}
 
 h1 {
     font-size: 70px;
     float: center;
-    padding: 20px;
+    padding: 0 20 20 0px;
     color: rgba(134,21,174,1);
     text-align: center; 
 }
@@ -52,6 +55,7 @@ h1 {
 #parentContact {
     padding: 20px;
     font-size: 20px;
+    font-family: "Open Sans";
 }
 
 [class|="bi bi-star"]       { text-shadow: 0 0 3px #000; }
@@ -93,6 +97,7 @@ h1 {
 #child-2 { margin-left: 20px; }
 
 #childinfo > div {
+    font-family: "Open Sans";
     padding: 30px;
     text-align: left;
 }
@@ -111,14 +116,15 @@ h1 {
     margin-left: auto;
     padding: 20px;
     font-size: 25px;
+    font-family: "Open Sans";
     color: rgba(134,21,174,1);
     text-align: left;
-    width: 350px;
-    height: 500px;
+    width: 415px;
+    height: 450px;
 }
 
 #additionalInfo > h3 { text-align: center; }
-#additionalInfo > li { color: rgb(206, 131, 231); }
+#additionalInfo > div { color: rgb(206, 131, 231); }
 
 #en_flag { 
     width: 30px;
@@ -137,4 +143,139 @@ h1 {
     background-color: rgb(206, 131, 231);
     border-color: transparent;
     border-radius: 15px;
+}
+
+/******************/
+/* Overhead Popup */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+  /* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+  /* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+  /* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+/*******************/
+/** Forms Styling **/
+* { box-sizing: border-box; }
+
+.form-container h1 { font-size: 40px; }
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 100px;
+    right: 28px;
+    width: 400px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid rgb(233, 201, 243);
+    z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+    justify-self: center;
+    max-width: 500px;
+    max-height: 700px;
+    padding: 10px;
+    background-color: rgb(233, 201, 243);
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+    background-color: #f1f1f1;
+    color: rgba(134,21,174,1);
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 70%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: rgba(134,21,174,1);
+    color: white;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
 }

@@ -1,22 +1,23 @@
 #logoName {
     font-size: 70px;
     float: center;
-    padding: 10px;
+    padding: 5px;
     color: rgba(134,21,174,1);
     text-align: center; 
+    font-family: "Crafty Girls"; 
+}
+
+#CGname{
+    font-family: "Crafty Girls"; 
 }
 
 /* columns styling */
 
-/* .container, .sub-col{
-    margin: 1rem;
-    padding: 2rem 2rem;
-
-} */
-.column{
+.column, .col1, .col2{
     display: inline-block;
     padding: 1rem 1rem;
     vertical-align: middle;
+    font-family: "Open Sans";
 }
 
 #col-1{
@@ -64,10 +65,22 @@
     font-size: 20px;
 }
 
+#profileBtn {
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    color:#808080 ;
+    background-color: #BEBEBE;
+}
+
+.sub-col{
+    background-color: rgb(233, 201, 243);
+    border-radius: 15px;
+    
+}
 
 #col-2{
     margin-left: 150px;
-    background-color: rgb(233, 201, 243);
     width: 350px;
     height: 500px;
     padding: 20px;
@@ -85,5 +98,4 @@
     text-align: left;
     width: 350px;
     height: 500px;
-    background-color: rgb(233, 201, 243);
 }
