@@ -7,10 +7,14 @@ function closeForm() {
 }
 
 function errorPage() {
-    window.open("mainFrameTasks.html", "_self");
+    window.open("errorPage.html", "_self");
 }
 
 function overheadPopup(){
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
+}
+
+function homePage() {
+    window.open("index.html", "_self");
 }
