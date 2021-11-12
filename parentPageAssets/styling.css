@@ -9,6 +9,7 @@ h1 {
     padding: 0 20 20 0px;
     color: rgba(134,21,174,1);
     text-align: center; 
+    cursor: pointer;
 }
 
 #container { display: flex; }
