@@ -1,3 +1,6 @@
+body{
+    background: #f5f5f5;
+}
 .navigation{
     display: flex;
     flex-direction: column;

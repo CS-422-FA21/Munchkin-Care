@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MunchkinCare | Calendar</title>
+    <link rel="stylesheet" href="index.css" >
+    <link rel="stylesheet" href = "messages.css">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crafty+Girls">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap">
+</head>
+<body class="messages">
+    <div class="navigation">
+        <div class="row">
+            <a class="logo-main" href="index.html">Munchkin Care</a>
+        </div>
+        <div class="row position-relative">
+            <div class="info-container">
+                <a class="profile-link" href="parentProfile.html"><img src="assets/images/icon-profile.png" alt="profile-icon"></a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="contact-list col-md-4">
+            <div class="contact-card">
+                <div class="profile-picture">
+                    <img src="caregiverPageAssets/LaurieStrode.jpeg">
+                </div>
+                <div class="name">
+                    Laurie Strode
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="profile-picture">
+                    <img src="parentPageAssets/images/johndoe.png">
+                </div>
+                <div class="name">
+                    John Doe
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="profile-picture">
+                    <img src="parentPageAssets/images/janedoe.png">
+                </div>
+                <div class="name">
+                    Jane Doe
+                </div>
+            </div>
+        </div>
+        <div class="message-action-container col-md-8 position-relative">
+            <div class="overlay-initial">
+                <div class="title">
+                    Please select a user from left to start or see a conversation
+                </div>
+                <img src="assets/images/icon-arrow.svg" >
+            </div>
+            <div class="title">
+                <img src="parentPageAssets/images/janedoe.png">
+                <div class="name">Name</div>
+            </div>
+            <div class="msg-area"></div>
+            <div class="controls">
+                <div class="booking-icon">
+                    <img src="assets/images/icon-book.png" alt="booking icon">
+                </div>
+                <div class="input-control">
+                    <input type="text" placeholder="Type your messager here..">
+                    <div class="send-btn"><img src="assets/images/icon-send.png" alt="send button"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+       
+
+    <div class="pop-up-container">
+        <div class="pop-up">
+            <div class="pop-up-header">
+                <div class="title">Title Goes here</div>
+            </div>
+            <div class="body"></div>
+            <div class="close-btn-container" onclick="closePopUp()">
+                <div class="close-btn">Close</div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            
+            $(".contact-card").on('click', function(){
+                var imgPath = $(this).find('img').attr('src');
+                var name = $(this).find(".name").html();
+                $('.message-action-container .title img').attr('src', imgPath);
+                $('.message-action-container .title .name').html(name);
+                $('.overlay-initial').fadeOut(200);
+            });
+           
+        });
+        function closePopUp(){
+                $(".pop-up-container").hide();    
+        }
+        function showPopUp( popup ){
+                if(popup == "share"){
+                    var title = "Share calendar via:"
+                    var body = "<div class='share-options-container'><div class='share-option'><img src='assets/images/icon-email.png'><div class='title'>Email</div></div>"+
+                    "<div class='share-option'><img src='assets/images/icon-msg.png'><div class='title'>Text/SMS</div></div>"+"<div class='share-option'><img src='assets/images/icon-wa.png'><div class='title'>WhatsApp</div></div>"+"</div>"
+                }else{
+                    var title = "Upcoming Event Details:"
+                    var body = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quisquam eveniet modi et facere? Ipsa in sit doloremque. Iste soluta nemo maiores amet molestias. Consequuntur voluptas explicabo dolorum eius dolorem."
+                }
+                $('.pop-up-container .title').html(title);
+                $('.pop-up-container .body').html(body);
+                $('.pop-up-container').fadeIn(500);
+            }
+    </script>
+</body>
+</html>
