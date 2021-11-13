@@ -10,28 +10,41 @@
     -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crafty+Girls">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="parentPageAssets/styling.css">
+    <link rel="stylesheet" href="searchPageAssets/styling.css">
+    <script src="parentPageAssets/parentprofile.js"></script>
 
 </head>
 <body>
-    <div class="">
-        <h1>Munchkin Care</h1>
-        <div class= "searchBar">
-            <input type="text" placeholder="Search..">
-            <button type="submit"><i class="fa fa-search"></i></button>
-        </div>
-        <div class= "searchParams">
-            <select name = "Distance" id = "distance">
-                <option value="default">Distance</option>
-            </select>
-            <select name = "Languages" id = "language">
-                <option value="default">Languages</option>
-            </select>
-            <select name = "Date" id = "date">
-                <option value="default">Date</option>
-            </select>
-            <select name = "Certifications" id = "certifications">
-                <option value="default">Certifications</option>
-            </select>
+    <div class="container">
+        <h1 onclick="homePage()">Munchkin Care</h1>
+        <div class="row">
+            <div class="col-sm">
+                <input type="text" placeholder="Search..">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+            <div class="col-sm">
+                <select name = "Distance" id = "distance">
+                    <option value="default">Distance</option>
+                </select>
+                <select name = "Languages" id = "language">
+                    <option value="default">Languages</option>
+                </select>
+                <select name = "Date" id = "date">
+                    <option value="default">Date</option>
+                </select>
+                <select name = "Certifications" id = "certifications">
+                    <option value="default">Certifications</option>
+                </select>
+            </div>
+            <div class="info-container">
+                <a class="messages-link" href="messages.html"><img src="assets/images/icon-msg.png" alt="message-icon"></a>
+                <a class="profile-link" href="parentProfile.html"><img src="assets/images/icon-profile.png" alt="profile-icon"></a>
+            </div>
         </div>
     </div>
     <div class="container">
