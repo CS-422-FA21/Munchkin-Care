@@ -152,7 +152,7 @@
         <br> <br>
         <div>
             <input type="button" id="bookBtn" value="Close" onclick="cancelButton()">
-            <input type="button" id="bookBtn" value="Book" onclick="errorLink()">  
+            <input type="button" id="bookBtn" value="Book" onclick="confrimPopup()"> 
         </div>
     </form>
 </div>
@@ -205,8 +205,18 @@
         <input type="button" id="fetures2" value="Add end date" onclick="errorLink()">
         <br>
         <input type="button" id="bookBtn" value="Close" onclick="cancelButton()">
-        <input type="button" id="bookBtn" value="Book" onclick="errorLink()"> 
+        <input type="button" id="bookBtn" value="Book" onclick="confrimPopup()"> 
         </form>
+</div>
+
+<div class="form-popup" id="confirmation">
+    <form>
+        <h3>Request sent!</h3>
+        <br>
+        <input type="button" id="bookBtn" value="Add Tasks" onclick="taskButton()">
+        <input type="button" id="bookBtn" value=" Close " onclick="cancelButton()">
+        <br><br>
+    </form>
 </div>
 
 

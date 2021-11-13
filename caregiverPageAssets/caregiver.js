@@ -31,4 +31,19 @@ function cancelButton(){
     document.getElementById("popUP").style.display = "none";
     document.getElementById("recurring").style.display = "none";
     document.getElementById("single").style.display = "none";
+    document.getElementById("confirmation").style.display = "none";
+
+}
+
+function taskButton(){
+    document.getElementById("popUP").style.display = "none";
+    document.getElementById("recurring").style.display = "none";
+    document.getElementById("single").style.display = "none";
+    window.open("tasks.html", "_self");
+}
+
+function confrimPopup(){
+    document.getElementById("recurring").style.display = "none";
+    document.getElementById("single").style.display = "none";
+    document.getElementById("confirmation").style.display = "block";
 }
