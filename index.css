@@ -1,3 +1,6 @@
+body{
+    background: #f5f5f5;
+}
 .navigation{
     display: flex;
     flex-direction: column;
@@ -18,6 +21,7 @@
     color: rgba(134,21,174,1);
     font-size: 36px;
     width: fit-content;
+    font-family: 'Crafty Girls', sans-serif;
 }
 .messages-link img,
 .profile-link img{
@@ -81,9 +85,8 @@
     border-bottom: 1px solid #cecece;
     padding: 5px 10px;
     cursor: pointer;
-}
-.search-bar .search-option:hover{
-    background: #cecece;
+    display: block;
+    color: #000;
 }
 .content{
     padding: 30px 10px;
@@ -96,6 +99,17 @@
     margin: 0 15px;
     padding: 15px;
     border-radius: 4px;
+    height: fit-content;
+}
+
+.calendar-widget .share-icon{
+    cursor: pointer;
+    width: fit-content;
+    margin-top: 10px;
+    padding: 5px;
+}
+.calendar-widget .share-icon img{
+    height: 24px;
 }
 .upcoming-event-widget{
     box-shadow: 0 2px 8px 4px rgb(0 0 0 / 10%);
@@ -106,6 +120,7 @@
     box-shadow: 0 2px 8px 4px rgb(0 0 0 / 10%);
     padding: 15px;
     border-radius: 4px;
+    height: fit-content;
 }
 .widget-title{
     font-size: 20px;
@@ -113,6 +128,12 @@
     border-bottom: 1px solid #000;
     margin-bottom: 15px;
     padding-bottom: 2px;
+    display: flex;
+    align-items: center;
+}
+.widget-title img{
+    height: 30px;
+    margin-left: auto;
 }
 .upcoming-event{
     display: flex;
@@ -121,22 +142,115 @@
     padding: 5px;
     border-radius: 4px;
 }
-.upcoming-event:hover{
+.upcoming-event:hover,
+.favorites-widget .favorite:hover,
+.calendar-widget .share-icon:hover,
+.search-bar .search-option:hover,
+.share-options-container .share-option:hover{
     background:rgba(134,21,174,0.1);
 }
-.upcoming-event .title{
+.upcoming-event .title,
+.favorite .title{
     font-size: 16px;
     border-bottom: 1px solid #808080;
     font-weight: 600;
     margin-bottom: 7px;
     width: fit-content;
+    color: #000;
 }
 .upcoming-event .short-desc{
     font-size: 14px;
 }
+.favorite .title{
+    border: 0;
+}
+.favorites-widget .favorite{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #cecece;
+    padding: 10px 0;
+    cursor: pointer;
+    
+}
+.favorite .profile-picture{
+    height: 60px;
+    width: 60px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgba(0,0,0,0.1);
+    margin-right: 15px;
+}
+.favorite .profile-picture img{
+    width: 60px;
+}
+ 
+.share-options-container{
+    display: flex;
+    flex-direction: column;
+}
+.share-options-container .share-option{
+    display: flex;
+    align-items: center;
+    border-bottom:  1px solid #cecece;
+    cursor: pointer;
+    padding: 15px;
+}
+.share-options-container .share-option img{
+    height: 28px;
+    width: 28px;
+    margin-right: 15px;
+}
 /* Utility Classes */
 .position-relative{
     position: relative;
+}
+.pop-up-container{
+    position: fixed;
+    z-index: 99999999999;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+    display: none;
+}
+.pop-up-container .pop-up{
+    height: 400px;
+    width: 300px;
+    background: #fff;
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+.pop-up-container .pop-up .pop-up-header{
+    font-size: 18px;
+    padding: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+.pop-up-container .pop-up .body{
+    padding: 5px 15px 15px;
+}
+.pop-up-container .close-btn-container{
+    margin-top: auto;
+    display: flex;;
+}
+.pop-up-container .close-btn{
+    height: 50px;
+    line-height: 50px;
+    width: 120px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid #cecece;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 4px rgb(0 0 0 / 10%);
+    cursor: pointer;
 }
 
 /* Utility Classes */
