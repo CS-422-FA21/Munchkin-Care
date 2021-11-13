@@ -18,7 +18,7 @@
 
 </head>
 <body>
-    <h1>Munchkin Care</h1>
+    <h1 onclick="homePage()">Munchkin Care</h1>
     <div id="container">
         <div id="parentProfile">
             <div>
@@ -136,14 +136,19 @@
 
     <label for="allergies"><b>Allergies</b></label><br>
     <label FOR="R3">Yes</label>
-    <input TYPE="Radio" Name="allegyChoice" ID="R3" Value="Yes" required>
+    <input TYPE="Radio" Name="allergyChoice" ID="R3" Value="Yes" required>
 
     <label FOR="R4">No</label>
-    <input TYPE="Radio" Name="allegyChoice" ID="R4" Value="No" required>
+    <input TYPE="Radio" Name="allergyChoice" ID="R4" Value="No" required>
 
     <br><br>
 
-    <button type="submit" class="btn" onclick="errorPage()">Done</button>
+    <button type="submit" class="btn" onclick="confirmChildAdd()">Done</button>
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
     </form>
+</div>
+
+<div class="confirm-form-popup" id="confirm-popup">
+    Your child's profile has been added!<br>
+    <button type="button" class="_btn cancel" onclick="_closeForm()" style="font-size: 20px;">Close</button>
 </div>

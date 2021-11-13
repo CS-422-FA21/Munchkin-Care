@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MunchkinCare | Calendar</title>
     <link rel="stylesheet" href="index.css" >
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crafty+Girls">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap">
 </head>
 <body>
     <div class="navigation">
@@ -33,7 +39,7 @@
     </div>
     <div class="content">
         <div class="upcoming-event-widget col-md-3">
-            <div class="widget-title">Upcoming Events</div>
+            <div class="widget-title">Upcoming Events<img src="assets/images/icon-upcoming.png"></div>
             <div class="upcoming-event">
                 <div class="title">11/28 Johnson Family</div>
                 <div class="short-desc">
@@ -61,8 +67,58 @@
         </div>
         <div class="calendar-widget col-md-6">
             <iframe src="https://calendar.google.com/calendar/embed?height=300&wkst=1&bgcolor=%239E69AF&ctz=America%2FChicago&showPrint=0&showTabs=1&showCalendars=0&showTitle=0&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y18wdTZiM3RyOW9pZWRmNDI2NGUzNDIzaGZuOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%2333B679&color=%237CB342&color=%230B8043" style="border:solid 1px #777" width="660" height="400" frameborder="0" scrolling="no"></iframe>
+            <div class="share-icon" onclick="showPopUp('share')"><img src="assets/images/icon-share-1.png"> Share Calendar</div>
         </div>
-        <div class="favorites-widget col-md-3"></div>
+        <div class="favorites-widget col-md-3">
+            <div class="widget-title">Favorites <img src="assets/images/icon-fav.png" alt="favorite-icon"></div>
+            <a class="favorite" href="caregiverProfile.html">
+                <div class="profile-picture">
+                    <img src="parentPageAssets/images/johndoe.png">
+                </div>
+                <div class="title">John Doe</div>
+            </a>
+            <a class="favorite" href="caregiverProfile.html">
+                <div class="profile-picture">
+                    <img src="caregiverPageAssets/LaurieStrode.jpeg">
+                </div>
+                <div class="title">Laurie Strode</div>
+            </a>
+        </div>
     </div>
+
+    <div class="pop-up-container">
+        <div class="pop-up">
+            <div class="pop-up-header">
+                <div class="title">Title Goes here</div>
+            </div>
+            <div class="body"></div>
+            <div class="close-btn-container" onclick="closePopUp()">
+                <div class="close-btn">Close</div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            
+            $(".upcoming-event").on('click', showPopUp);
+           
+        });
+        function closePopUp(){
+                $(".pop-up-container").hide();    
+        }
+        function showPopUp( popup ){
+                if(popup == "share"){
+                    var title = "Share calendar via:"
+                    var body = "<div class='share-options-container'><div class='share-option'><img src='assets/images/icon-email.png'><div class='title'>Email</div></div>"+
+                    "<div class='share-option'><img src='assets/images/icon-msg.png'><div class='title'>Text/SMS</div></div>"+"<div class='share-option'><img src='assets/images/icon-wa.png'><div class='title'>WhatsApp</div></div>"+"</div>"
+                }else{
+                    var title = "Upcoming Event Details:"
+                    var body = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quisquam eveniet modi et facere? Ipsa in sit doloremque. Iste soluta nemo maiores amet molestias. Consequuntur voluptas explicabo dolorum eius dolorem."
+                }
+                $('.pop-up-container .title').html(title);
+                $('.pop-up-container .body').html(body);
+                $('.pop-up-container').fadeIn(500);
+            }
+    </script>
 </body>
 </html>
