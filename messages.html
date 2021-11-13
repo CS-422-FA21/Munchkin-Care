@@ -93,16 +93,38 @@
     </div>
     <script type="text/javascript">
         $(function() {
-            
+            var right = true;
             $(".contact-card").on('click', function(){
                 var imgPath = $(this).find('img').attr('src');
                 var name = $(this).find(".name").html();
                 $('.message-action-container .title img').attr('src', imgPath);
                 $('.message-action-container .title .name').html(name);
+                $('.msg-area').html("");
                 $('.overlay-initial').fadeOut(200);
             });
-           
+            $(".input-control input").on("keydown", function(e){
+                if(e.key == "Enter"){
+                    $(".send-btn").trigger('click');
+                };
+            });
+           $(".send-btn").on('click', function(){
+               if($('.input-control input').val().length == 0){
+                   return;
+               }
+                var msgText = $('.input-control input').val();
+               $('.input-control input').val("");
+               var msgHTML = "<div class='msg right'>"+msgText+"</div>";
+               $('.msg-area').append($(msgHTML).hide().fadeIn(800));
+               customcCallBack();
+               $('.input-control input').focus();
+           });
         });
+
+        function customcCallBack(){
+            var msgText = "I don't know how to respond to that";
+            msgHTML = "<div class='msg left'>"+msgText+"</div>";
+            $('.msg-area').append($(msgHTML).hide().delay(1000).fadeIn(800));
+        }
         function closePopUp(){
                 $(".pop-up-container").hide();    
         }
