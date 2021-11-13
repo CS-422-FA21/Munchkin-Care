@@ -9,7 +9,9 @@ function errorLink(){
 function homeLink(){
     window.open("index.html", "_self");
 }
-
+function messageLink(){
+    window.open("messages.html", "_self");
+}
 function openPopup(){
     document.getElementById("popUP").style.display = "block";
     document.getElementById("single").style.display = "none";
