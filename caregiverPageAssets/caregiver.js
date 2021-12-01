@@ -1,20 +1,21 @@
-function openProfile(){
-    window.open("parentProfile.html", "_self");
-}
-
 function errorLink(){
     window.open("errorPage.html", "_self");
 }
 
-function homeLink(){
-    window.open("index.html", "_self");
-}
-function messageLink(){
-    window.open("messages.html", "_self");
-}
 function openPopup(){
     document.getElementById("popUP").style.display = "block";
     document.getElementById("single").style.display = "none";
+}
+function homePage() {
+    window.open("index.html", "_self");
+}
+
+function msgPage(){
+    window.open("messages.html", "_self");
+}
+
+function parentPage(){
+    window.open("parentProfile.html", "_self");
 }
 
 function signlePick(){
