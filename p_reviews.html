@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+        References:
+        - Popup Form: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_popup_form 
+    -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crafty+Girls">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="parentPageAssets/styling.css">
+    <script src="parentPageAssets/parentprofile.js"></script>
+
+</head>
+<body>
+    <div id="toolbar">
+        <i id="homeBtn"     class="bi bi-house-door-fill"   onclick="homePage()"></i>
+        <i id="msgBtn"      class="bi bi-chat-dots-fill"    onclick="msgPage()"></i>
+        <i id="profileBtn"  class="bi bi-person-fill"       onclick="parentPage()"></i>
+    </div>
+    <h1 onclick="homePage()">Munchkin Care</h1>
+    <div id="comment">
+        Luca B. <i class="bi bi-patch-check-fill"></i>
+        <div id="commentRating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> <br>
+        </div>
+        <div id="commentText">
+            <br>
+            John is a great dad! Quick payment and quick responses when needed! 10/10 stars if I could! 
+        </div>
+    </div>
+    <div id="comment">
+        Mika S. <i class="bi bi-patch-check-fill"></i>
+        <div id="commentRating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i> <br>
+        </div>
+        <div id="commentText">
+            <br>
+            His kids are a bit rowdy. Not ideal for first time babysitters. Dad is great though and always helpful! 
+        </div>
+    </div>
+</body>

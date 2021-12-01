@@ -1,6 +1,6 @@
 /* Header styling */
 #logoName {
-    font-size: 70px;
+    font-size: 50px;
     float: center;
     padding: 5px;
     color: rgba(134,21,174,1);
@@ -12,18 +12,12 @@
     font-family: "Crafty Girls"; 
 }
 
-#myProfile{
-    width: 2.5%;
-    height: auto;
+#toolbar {
+    font-size: 50px;
     float: right;
-   
 }
-
-#msg-icon {
-    width: 3%;
-    height: auto;
-    float: right;
-    margin-right: 3px;
+#toolbar:hover {
+    cursor: pointer;
 }
 
 /* columns styling */
