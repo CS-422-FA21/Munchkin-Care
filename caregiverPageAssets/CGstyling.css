@@ -34,11 +34,16 @@
     font-family: "Open Sans";
 }
 
+#col-2{
+    margin-right: 100px;
+}
+
+
 /* column 1 styling */
 #col-1{
     float: left;
     padding: 20px;
-    margin-right: auto;
+    margin-right: 1px;
     margin-left: 75px;
     font-size: 30px;
     text-align: center;
@@ -68,6 +73,7 @@
 #header{
     font-size: 30px;
     font-weight: bold;
+    color: black;
 }
 
 #bullets, #ref, #ICE {
@@ -115,6 +121,11 @@
     width: 350px;
     height: 625px;
 }
+
+#person-name, #e-mail, #phoneNum, #bullets{
+    color: #36454F;
+}
+
 
 /* POPUPS */
 
