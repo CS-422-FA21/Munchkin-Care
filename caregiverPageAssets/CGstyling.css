@@ -122,9 +122,17 @@
     height: 625px;
 }
 
-#person-name, #e-mail, #phoneNum, #bullets{
+#person-name,  #bullets{
     color: #36454F;
 }
+
+/* email and phone number slightly diffrent shade */
+#e-mail, #phoneNum{
+    color: #4b5f6d;
+    /* color: #556d7c;  */
+}
+
+
 
 
 /* POPUPS */
