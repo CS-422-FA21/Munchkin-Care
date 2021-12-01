@@ -48,7 +48,7 @@
                 <i class="bi bi-envelope"></i>
                 <label>laurie.strode@gmail.com</label>
             </div>
-            <input type="button" id="bookBtn" value="Book their service" onclick="openPopup()">
+            <input type="button" id="bookBtn" class="bookBTN" value="Book their service" onclick="openPopup()">
         </div>
         <div class="column" id="details">
             <div class="sub-col">
@@ -126,97 +126,105 @@
 </body>
 
 <!-- Popup Form -->
-<div class="form-popup" id="popUP">
-    <form >
-    <h2>Type of Appointment</h2>
+<div class="popup-cont" id="popUP">
+    <div class = "pop-up">
+        <form >
+        <h2>Type of Appointment</h2>
 
-    <input type="button" id="bookBtn" value="Single" onclick="signlePick()">
-    <input type="button" id="bookBtn" value="Recurring" onclick="recurringPick()">
-    <br>
-    <input type="button" id="cancle" value="Close" onclick="cancelButton()">
-    </form>
-</div>
-
-<div class="form-popup" id="single">
-    <form>
-        <h3>Select Time and Date</h3>
-        <label id="time">Select Time</label>
-        <input type="time" id="signleTIme" name="appt"
-        min="00:00" max="24:00" required>
-
-        <label id="Date">Select Date</label>
-        <input type="date" id="start" name="trip-start"
-        value="0000-00-00"
-        min="2021-01-01" max="2023-12-31">
-
-        <br> <br>
-        <div>
-            <input type="button" id="bookBtn" value="Close" onclick="cancelButton()">
-            <input type="button" id="bookBtn" value="Book" onclick="confrimPopup()"> 
-        </div>
-    </form>
-</div>
-
-<div class="form-popup" id="recurring">
-    <form>
-        <h3>Select Time and Date</h3>
-        <div>
-            <label id="time">Select Time</label>
-            <br>
-            <label id="start">Start</label>
-            <input type="time" id="signleTIme" name="appt"
-        min="00:00" max="24:00" required>
-
-        <label id="end">  End</label>
-        <input type="time" id="signleTIme" name="appt"
-        min="00:00" max="24:00" required>
-        </div>
+        <input type="button" id="bookBtn" value="Single" onclick="signlePick()">
+        <input type="button" id="bookBtn" value="Recurring" onclick="recurringPick()">
         <br>
-        <div>
-            <label id="time">Select Days</label>
-            <br>
-            <label id="time">Start date</label>
+        <input type="button" id="cancle" value="Close" onclick="cancelButton()">
+        </form>
+    </div>
+</div>
+
+<div class="popup-cont" id="single">
+    <div class = "pop-up">
+        <form>
+            <h3>Select Time and Date</h3>
+            <label id="time">Select Time</label>
+            <input type="time" id="signleTIme" name="appt"
+            min="00:00" max="24:00" required>
+
+            <label id="Date">Select Date</label>
             <input type="date" id="start" name="trip-start"
             value="0000-00-00"
             min="2021-01-01" max="2023-12-31">
-            <br>
-            <br>
-            <label id="time">Days of the week</label>
-        </div>
 
-        <div class="weekDays-selector">
-            <input type="checkbox" id="w-mon" class="weekday" />
-            <label for="w-mon">M</label>
-            <input type="checkbox" id="w-tue" class="weekday" />
-            <label for="w-tue">T</label>
-            <input type="checkbox" id="w-wed" class="weekday" />
-            <label for="w-wed">W</label>
-            <input type="checkbox" id="w-thu" class="weekday" />
-            <label for="w-thu">T</label>
-            <input type="checkbox" id="w-fri" class="weekday" />
-            <label for="w-fri">F</label>
-            <input type="checkbox" id="w-sat" class="weekday" />
-            <label for="w-sat">S</label>
-            <input type="checkbox" id="w-sun" class="weekday" />
-            <label for="w-sun">S</label>
-        </div>
-        <br>
-        <input type="button" id="fetures1" value="Add another set" onclick="errorLink()">
-        <input type="button" id="fetures2" value="Add end date" onclick="errorLink()">
-        <br>
-        <input type="button" id="bookBtn" value="Close" onclick="cancelButton()">
-        <input type="button" id="bookBtn" value="Book" onclick="confrimPopup()"> 
+            <br> <br>
+            <div>
+                <input type="button" id="bookBtn" value="Close" onclick="cancelButton()">
+                <input type="button" id="bookBtn" value="Book" onclick="confrimPopup()"> 
+            </div>
         </form>
+    </div>
 </div>
 
-<div class="form-popup" id="confirmation">
-    <form>
-        <h3>Request sent!</h3>
-        <br>
-        <input type="button" id="bookBtn" value="Add Tasks" onclick="taskButton()">
-        <input type="button" id="bookBtn" value=" Close " onclick="cancelButton()">
-        <br><br>
-    </form>
+<div class="popup-cont" id="recurring">
+    <div class = "pop-up">
+        <form>
+            <h3>Select Time and Date</h3>
+            <div>
+                <label id="time">Select Time</label>
+                <br>
+                <label id="start">Start</label>
+                <input type="time" id="signleTIme" name="appt"
+            min="00:00" max="24:00" required>
+
+            <label id="end">  End</label>
+            <input type="time" id="signleTIme" name="appt"
+            min="00:00" max="24:00" required>
+            </div>
+            <br>
+            <div>
+                <label id="time">Select Days</label>
+                <br>
+                <label id="time">Start date</label>
+                <input type="date" id="start" name="trip-start"
+                value="0000-00-00"
+                min="2021-01-01" max="2023-12-31">
+                <br>
+                <br>
+                <label id="time">Days of the week</label>
+            </div>
+
+            <div class="weekDays-selector">
+                <input type="checkbox" id="w-mon" class="weekday" />
+                <label for="w-mon">M</label>
+                <input type="checkbox" id="w-tue" class="weekday" />
+                <label for="w-tue">T</label>
+                <input type="checkbox" id="w-wed" class="weekday" />
+                <label for="w-wed">W</label>
+                <input type="checkbox" id="w-thu" class="weekday" />
+                <label for="w-thu">T</label>
+                <input type="checkbox" id="w-fri" class="weekday" />
+                <label for="w-fri">F</label>
+                <input type="checkbox" id="w-sat" class="weekday" />
+                <label for="w-sat">S</label>
+                <input type="checkbox" id="w-sun" class="weekday" />
+                <label for="w-sun">S</label>
+            </div>
+            <br>
+            <input type="button" id="fetures1" value="Add another set" onclick="errorLink()">
+            <input type="button" id="fetures2" value="Add end date" onclick="errorLink()">
+            <br>
+            <input type="button" id="bookBtn" value="Close" onclick="cancelButton()">
+            <input type="button" id="bookBtn" value="Book" onclick="confrimPopup()"> 
+        </form>
+    </div>
+</div>
+
+<div class="popup-cont" id="confirmation">
+    <div class = "pop-up">
+        <form>
+            <h3>Request sent!</h3>
+            <br>
+            <input type="button" id="bookBtn" value="Add Tasks" onclick="taskButton()">
+            <input type="button" id="bookBtn" value=" Close " onclick="cancelButton()">
+            <br><br>
+        </form>
+    </div>
 </div>
 
 
