@@ -24,3 +24,4 @@ function homePage()     { window.open("index.html",         "_self"); }
 function msgPage()      { window.open("messages.html",      "_self"); }
 function parentPage()   { window.open("parentProfile.html", "_self"); }
 function reviewsPage()  { window.open("parentPageAssets/reviews.html",     "_self"); }
+function caregiverPage()   { window.open("caregiverProfile.html", "_self"); }
