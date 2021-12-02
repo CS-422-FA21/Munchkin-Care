@@ -38,126 +38,114 @@
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star"></i>
                 </div>
-                <div id="numRatings">(14)</div>
+                <div id="numRatings" onclick="errorPage()">(4)</div>
                 <div id="parentContact">
                     <i class="bi bi-telephone"></i>
-                    <div class="popup" onclick="overheadPopup()">(721) XXX - XXXX
-                        <span class="popuptext" id="myPopup">Call (721) XXX - XXXX?</span>
-                    </div>
-                    <br></br>
+                    (000) XXX - XXXX
+                    <br>
                     <i class="bi bi-envelope"></i>
-                    john_doe@example.com
+                    jojo_doedoe@example.com
                     
                     <!-- <h3>Languages</h3> -->
                     <br><br>
                     <img id="en_flag" src="parentPageAssets/images/gb.svg"><img>
                     English <br>
                     <img id="sa_flag" src="parentPageAssets/images/sa.png"><img>
-                    Afrikaans
+                    Afrikaans <br>
+                    <img id="sp_flag" src="parentPageAssets/images/sp.png"><img>
+                    Spanish
                     <br>
-                    <button id="addChild" type="button" onclick="openForm()">
+                    <button id="addChild" type="button" onclick="openPopup()">
                         <i class="bi bi-plus"></i>
                         Add child profile
                     </button>
                     <br>
-                    <a href="parentProfile.html">Edit Profile</a>
+                    <a href="EDITparentProfile.html">Edit Profile</a>
                 </div>
             </div> <!-- end of Parent info -->
         </div> <!-- end of Parent's entire profile -->
 
         <div id="childProfiles">
-            <!-- First Child -->
-            <div id="child-1">
-                <div>
-                    <img id="childImage" src="parentPageAssets/images/joedoe.png"></img>
-                </div>
-                <div id="childinfo">
-                    Joey <br>
-                    7 years old
-                    <div>
-                        Allergies: <br>
-                        <li>Cherries</li>
-                        <br>
-                        Medical Conditions: <br>
-                        <li>Epilepsy</li>
-                        <li>Asthma</li>
-                    </div>
-                </div>
-            </div> <!-- end of First child info -->
-
-            <!-- Second Child -->
+            <!-- Only Child -->
             <div id="child-2">
                 <div>
-                    <img id="childImage" src="parentPageAssets/images/janedoe.png"></img>
+                    <img id="childImage" src="parentPageAssets/images/neddoe.png"></img>
                 </div>
                 <div id="childinfo">
-                    Jane <br>
-                    5 years old
+                    Ned <br>
+                    3 years old
                     <div>
                         Allergies: <br>
-                        <li>Peanuts</li>
-                        <li>Shrimp</li>
-                        <li>Cat Dander</li>
-                        <br>
+                        <li>None</li>
                         Medical Conditions: <br>
                         <li>None</li>
                     </div>
                 </div> 
-            </div> <!-- end of Second child info -->
+            </div> <!-- end of Third child info -->
         </div>
 
         <div id="additionalInfo">
             <h3>Emergency Contacts</h3>
-            Martha Brighton
-            <li>(773) 000 - 0303</li>
-            <li>m.bright@example.com</li>
-            <br>
-            Jonathan Doe
-            <li>(312) 000 - 0202</li>
-            <li>jona_doe@example.com</li>
-            <br>
-            Jennifer Doe
-            <li>(224) 000 - 0101</li>
-            <li>doe.jenn@example.com</li>
+            <div id="iceContacts"> 
+                Martha Brighton
+                <br>
+                <i class="bi bi-telephone"></i> (773) 000 - 0303<br>
+                <i class="bi bi-envelope"></i> m.bright@example.com
+                <br><br>
+                Jonathan Doe
+                <br>
+                <i class="bi bi-telephone"></i> (312) 000 - 0202<br>
+                <i class="bi bi-envelope"></i> jona_doe@example.com
+                <br><br>
+                Jennifer Doe
+                <br>
+                <i class="bi bi-telephone"></i> (224) 000 - 0101<br>
+                <i class="bi bi-envelope"></i>  doe.jenn@example.com
+            </div>
         </div>
     </div>
 </body>
 
 <!-- Popup Form -->
-<div class="form-popup" id="myForm">
-    <form class="form-container">
-    <h1>Add Child</h1>
+<div class="popup-cont" id="popUP">
+    <div class = "pop-up">
+        <form >
+        <h2>Add a Child</h2>
 
-    <label for="childName"><b>Name</b></label>
-    <input type="text" placeholder="Enter Child's Name" name="childName" required>
+        <label for="childName"><b>Name</b></label>
+        <input type="text" placeholder="Enter Child's Name" name="childName" required><br>
 
-    <label for="age"><b>Age</b></label><br>
-    <input type="text" placeholder="Enter Child's Age" name="age" required><br>
-    
-    <label for="medCond"><b>Medical Conditions</b></label><br>
-    <label FOR="R1">Yes</label>
-    <input TYPE="Radio" Name="medChoice" ID="R1" Value="Yes" required>
+        <label for="age"><b>Age</b></label>
+        <input type="text" placeholder="Enter Child's Age" name="age" required><br>
 
-    <label FOR="R2">No</label>
-    <input TYPE="Radio" Name="medChoice" ID="R2" Value="No" required>
+        <br>
+        <label for="medCond"><b>Medical Conditions</b></label><br>
+        <label FOR="R1">Yes</label>
+        <input TYPE="Radio" Name="medChoice" ID="R1" Value="Yes" required>
+        <label FOR="R2">No</label>
+        <input TYPE="Radio" Name="medChoice" ID="R2" Value="No" required>
+        <br>
+        <input type="text" placeholder="Enter Child's Medical Conditions" name="medCond" required><br>
 
-    <br><br>
+        <br><br>
 
-    <label for="allergies"><b>Allergies</b></label><br>
-    <label FOR="R3">Yes</label>
-    <input TYPE="Radio" Name="allergyChoice" ID="R3" Value="Yes" required>
+        <label for="allergies"><b>Allergies</b></label><br>
+        <label FOR="R3">Yes</label>
+        <input TYPE="Radio" Name="allergyChoice" ID="R3" Value="Yes" required>
+        <label FOR="R4">No</label>
+        <input TYPE="Radio" Name="allergyChoice" ID="R4" Value="No" required>
+        <br>
+        <input type="text" placeholder="Enter Child's Allergies" name="allergies" required><br>
 
-    <label FOR="R4">No</label>
-    <input TYPE="Radio" Name="allergyChoice" ID="R4" Value="No" required>
+        <br><br>
 
-    <br><br>
-
-    <button type="submit" class="btn" onclick="confirmChildAdd()">Done</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-    </form>
+        <button type="submit" class="btn" onclick="confirmChildAdd()">Done</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
 </div>
 
 <div class="confirm-form-popup" id="confirm-popup">
     Your child's profile has been added!<br>
-    <button type="button" class="_btn cancel" onclick="_closeForm()" style="font-size: 20px;">Close</button>
+    <button type="button" class="_btn cancel" onclick="closeConfirm()" style="font-size: 20px;">Close</button>
 </div>

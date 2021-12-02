@@ -1,6 +1,13 @@
-function openForm()     { document.getElementById("myForm").style.display = "block"; }
-function closeForm()    { document.getElementById("myForm").style.display = "none"; }
-function _closeForm()   { document.getElementById("confirm-popup").style.display = "none"; }
+function openPopup(){
+    document.getElementById("popUP").style.display = "block";
+    document.getElementById("single").style.display = "none";
+}
+function closeForm()    { document.getElementById("popUP").style.display = "none"; }
+
+function closeConfirm() { 
+    document.getElementById("confirm-popup").style.display = "none"; 
+    window.open("newChild.html",     "_self");
+}
 
 function overheadPopup(){
     var popup = document.getElementById("myPopup");
@@ -8,11 +15,11 @@ function overheadPopup(){
 }
 
 function confirmChildAdd() {
-    document.getElementById("myForm").style.display = "none";
+    document.getElementById("popUP").style.display = "none";
     document.getElementById("confirm-popup").style.display = "block";
 }
 
-function errorPage()    { window.open("errorPage.html",     "_self"); }
+function errorPage()    { window.open("p_reviews.html",     "_self"); }
 function homePage()     { window.open("index.html",         "_self"); }
 function msgPage()      { window.open("messages.html",      "_self"); }
 function parentPage()   { window.open("parentProfile.html", "_self"); }
