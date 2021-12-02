@@ -178,19 +178,20 @@ function newElement() {
   var spaceN = document.createTextNode(space);
   var spaceN2 = document.createTextNode(space);
   
-  li.appendChild(time);
-
-  li.appendChild(spaceN2);
-
-  li.appendChild(t);
-
-  li.appendChild(spaceN);
-
-  li.appendChild(date);
+  
 
   if (inputTaskValue === '') {
     alert("Please add task name");
   } else {
+    li.appendChild(time);
+
+    li.appendChild(spaceN2);
+
+    li.appendChild(t);
+
+    li.appendChild(spaceN);
+
+    li.appendChild(date);
     document.getElementById("myUL").appendChild(li);
   }
 
