@@ -4,6 +4,9 @@ body.index{
 .content .col-md-3.right-side{
     padding-left: 0;
 }
+iframe{
+    max-width: 100%;;
+}
 .navigation{
     display: flex;
     flex-direction: column;
@@ -277,3 +280,34 @@ body.index{
 }
 
 /* Utility Classes */
+
+
+@media only screen and (max-width: 760px) {
+    .navigation .logo-main{
+        font-size: 36px;
+    }
+    .search-bar{
+        width: 40%;
+        margin-left: 18px;
+    }
+    #toolbar{
+        top: -3px;
+        right: 20px;
+        font-size: 36px;
+        line-height: 36px;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .upcoming-event-widget, .calendar-widget, .col-md-3.right-side{
+        margin: 10px 0;
+    }
+    .upcoming-event-widget{
+        max-height: 240px;
+        overflow: auto;
+    }
+    iframe{
+        max-width: 330px !important;
+    }
+    
+  }
