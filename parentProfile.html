@@ -38,7 +38,7 @@
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star"></i>
                 </div>
-                <div id="numRatings" onclick="errorPage()">(4)</div>
+                <div id="numRatings" onclick="reviewsPage()">(4)</div>
                 <div id="parentContact">
                     <i class="bi bi-telephone"></i>
                     (224) XXX - XXXX
@@ -107,17 +107,17 @@
         <div id="additionalInfo">
             <h3>Emergency Contacts</h3>
             <div id="iceContacts"> 
-                Jane Doe
+                Jane Doe (Mother)
                 <br>
                 <i class="bi bi-telephone"></i> (773) 000 - 0303<br>
                 <i class="bi bi-envelope"></i> janedoe@example.com
                 <br><br>
-                Jonathan Doe
+                Jonathan Doe (Grandfather)
                 <br>
                 <i class="bi bi-telephone"></i> (312) 000 - 0202<br>
                 <i class="bi bi-envelope"></i> jona_doe@example.com
                 <br><br>
-                Jennifer Doe
+                Jennifer Doe (Grandmother)
                 <br>
                 <i class="bi bi-telephone"></i> (224) 000 - 0101<br>
                 <i class="bi bi-envelope"></i>  doe.jenn@example.com
@@ -129,38 +129,33 @@
 <!-- Popup Form -->
 <div class="popup-cont" id="popUP">
     <div class = "pop-up">
-        <form >
-        <h2>Add a Child</h2>
+        <form>
+            <h2>Add a Child</h2>
 
-        <label for="childName"><b>Name</b></label>
-        <input type="text" placeholder="Enter Child's Name" name="childName" required><br>
+            <label for="childName"><b>Name</b></label>
+            <input type="text" placeholder="Enter Child's Name" name="childName" required/><br><br>
 
-        <label for="age"><b>Age</b></label>
-        <input type="text" placeholder="Enter Child's Age" name="age" required><br>
+            <label for="age"><b>Age</b></label>
+            <input type="text" placeholder="Enter Child's Age" name="age" required><br><br>
 
-        <br>
-        <label for="medCond"><b>Medical Conditions</b></label><br>
-        <label FOR="R1">Yes</label>
-        <input TYPE="Radio" Name="medChoice" ID="R1" Value="Yes" required>
-        <label FOR="R2">No</label>
-        <input TYPE="Radio" Name="medChoice" ID="R2" Value="No" required>
-        <br>
-        <input type="text" placeholder="Enter Child's Medical Conditions" name="medCond" required><br>
+            <label for="medCond"><b>Medical Conditions</b></label><br>
+            <label FOR="R1">Yes</label>
+            <input TYPE="Radio" Name="medChoice" ID="R1" Value="Yes" required>
+            <label FOR="R2">No</label>
+            <input TYPE="Radio" Name="medChoice" ID="R2" Value="No" required>
+            <br>
+            <input type="text" placeholder="Enter Child's Medical Conditions" name="medCond" required><br><br>
 
-        <br><br>
+            <label for="allergies"><b>Allergies</b></label><br>
+            <label FOR="R3">Yes</label>
+            <input TYPE="Radio" Name="allergyChoice" ID="R3" Value="Yes" required>
+            <label FOR="R4">No</label>
+            <input TYPE="Radio" Name="allergyChoice" ID="R4" Value="No" required>
+            <br>
+            <input type="text" placeholder="Enter Child's Allergies" name="allergies" required><br><br>
 
-        <label for="allergies"><b>Allergies</b></label><br>
-        <label FOR="R3">Yes</label>
-        <input TYPE="Radio" Name="allergyChoice" ID="R3" Value="Yes" required>
-        <label FOR="R4">No</label>
-        <input TYPE="Radio" Name="allergyChoice" ID="R4" Value="No" required>
-        <br>
-        <input type="text" placeholder="Enter Child's Allergies" name="allergies" required><br>
-
-        <br><br>
-
-        <button type="submit" class="btn" onclick="confirmChildAdd()">Done</button>
-        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            <button type="submit" class="btn" onclick="confirmChildAdd()">Done</button>
+            <button type="cancel" class="btn cancel" onclick="closeForm()">Close</button>
         </form>
     </div>
 </div>
