@@ -14,143 +14,125 @@ https://www.w3schools.com/howto/howto_js_todolist.asp#:~:text=Create%20The%20To%
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="parentPageAssets/styling.css">
-<style>
-body {
-  margin: 0;
-  min-width: 250px;
-}
+    <link rel="stylesheet" href="tasksAssets/tasksStyling.css">
 
-/* Include the padding and border in an element's total width and height */
-* {
-  box-sizing: border-box;
-}
+    <script src="tasksAssets/tasks.js"></script>
 
-/* Remove margins and padding from the list */
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-/* Style the list items */
-ul li {
-  cursor: pointer;
-  position: relative;
-  padding: 12px 8px 12px 40px;
-  list-style-type: none;
-  background: #eee;
-  font-size: 18px;
-  transition: 0.2s;
-  
-  /* make the list items unselectable */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
-  background: #f4caf8;
-}
-
-/* Darker background-color on hover */
-ul li:hover {
-  background: rgb(230, 152, 233);
-}
-
-/* When clicked on, add a background color and strike out text */
-ul li.checked {
-  background: rgb(124, 8, 153);
-  color: #fff;
-  text-decoration: line-through;
-}
-
-/* Add a "checked" mark when clicked on */
-ul li.checked::before {
-  content: '';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
-
-/* Style the close button */
-.close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
-}
-
-.close:hover {
-  background-color: #510358;
-  color: white;
-}
-
-/* Style the header */
-.header {
-  background-color: #7f4981;
-  padding: 30px 40px;
-  color: white;
-  text-align: center;
-}
-
-/* Clear floats after the header */
-.header:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the input */
-input {
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  width: 75%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
-}
-
-/* Style the "Add" button */
-.addBtn {
-  padding: 10px;
-  width: 25%;
-  background: #d9d9d9;
-  color: #555;
-  float: left;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: 0;
-}
-
-.addBtn:hover {
-  background-color: #bbb;
-}
-</style>
 </head>
 <body>
-
+  <div id="toolbar">
+    <i id="homeBtn"     class="bi bi-house-door-fill"   onclick="homePage()"></i>
+    <i id="msgBtn"      class="bi bi-chat-dots-fill"    onclick="msgPage()"></i>
+    <i id="profileBtn"  class="bi bi-person-fill"       onclick="parentPage()"></i>
+</div>
+<h1 id="logoName" onclick="homeLink()">Munchkin Care</h1>
   
 
 <div id="myDIV" class="header">
-  <h2 style="margin:5px">Munchkin Care</h2>
   <h2 style="margin:5px">Tasks To Do</h2>
-  <input type="text" id="myTaskInput" placeholder="Enter Task Name">
-  <input type="text" id="myTimeInput" placeholder="Enter Task Time">
-  <span onclick="newElement()" class="addBtn">Add</span>
+  <!-- <input type="text" id="myTaskInput" placeholder="Enter Task Name"> -->
+  <!-- <input type="text" id="myTimeInput" placeholder="Enter Task Time"> -->
+  <span onclick="openPopup()" class="addBtn">Add New Task Here</span>
 </div>
 
 <ul id="myUL">
+  <li>Go to the dentist</li>
 </ul>
+
+<div class="popup-cont" id="popUP">
+  <div class = "pop-up">
+      <form >
+      <h2>New Task</h2>
+
+      <input type="button" id="bookBtn" value="Single" onclick="signlePick()">
+      <input type="button" id="bookBtn" value="Recurring" onclick="recurringPick()">
+      <br>
+      <input type="button" id="cancle" value="Close" onclick="cancelButton()">
+      </form>
+  </div>
+</div>
+
+<div class="popup-cont" id="single">
+  <div class = "pop-up">
+      <form> 
+          
+         <h3>Add new task </h3>
+          <input type="text" id="myTaskInput" placeholder="Enter Task Name">
+
+          <br> <br>
+
+          
+          <label id="time">Select Time</label>
+          <input type="time" id="signleTIme" name="appt"
+          min="00:00" max="24:00" required>
+
+          <label id="Date">Select Date</label>
+          <input type="date" id="start" name="trip-start"
+          value="0000-00-00"
+          min="2021-01-01" max="2023-12-31">
+
+          <br> <br>
+          <div>
+              <input type="button" id="bookBtn" value="Close" onclick="cancelButton()">
+              <input type="button" id="bookBtn" value="Add Task" onclick="newElement()"> 
+          </div>
+      </form>
+  </div>
+</div>
+
+<div class="popup-cont" id="recurring">
+  <div class = "pop-up">
+      <form>
+          <h3>Select Time and Date</h3>
+          <div>
+              <label id="time">Select Time</label>
+              <br>
+              <label id="start">Start</label>
+              <input type="time" id="signleTIme" name="appt"
+          min="00:00" max="24:00" required>
+
+          <label id="end">  End</label>
+          <input type="time" id="signleTIme" name="appt"
+          min="00:00" max="24:00" required>
+          </div>
+          <br>
+          <div>
+              <label id="time">Select Days</label>
+              <br>
+              <label id="time">Start date</label>
+              <input type="date" id="start" name="trip-start"
+              value="0000-00-00"
+              min="2021-01-01" max="2023-12-31">
+              <br>
+              <br>
+              <label id="time">Days of the week</label>
+          </div>
+
+          <div class="weekDays-selector">
+              <input type="checkbox" id="w-mon" class="weekday" />
+              <label for="w-mon">M</label>
+              <input type="checkbox" id="w-tue" class="weekday" />
+              <label for="w-tue">T</label>
+              <input type="checkbox" id="w-wed" class="weekday" />
+              <label for="w-wed">W</label>
+              <input type="checkbox" id="w-thu" class="weekday" />
+              <label for="w-thu">T</label>
+              <input type="checkbox" id="w-fri" class="weekday" />
+              <label for="w-fri">F</label>
+              <input type="checkbox" id="w-sat" class="weekday" />
+              <label for="w-sat">S</label>
+              <input type="checkbox" id="w-sun" class="weekday" />
+              <label for="w-sun">S</label>
+          </div>
+          <br>
+          <input type="button" id="fetures1" value="Add another set" onclick="errorLink()">
+          <input type="button" id="fetures2" value="Add end date" onclick="errorLink()">
+          <br>
+          <input type="button" id="bookBtn" value="Close" onclick="cancelButton()">
+          <input type="button" id="bookBtn" value="Book" onclick="confrimPopup()"> 
+      </form>
+  </div>
+</div>
 
 <script>
 // Create a "close" button and append it to each list item
@@ -186,29 +168,36 @@ list.addEventListener('click', function(ev) {
 function newElement() {
   var li = document.createElement("li");
   
-  var inputTimeValue = document.getElementById("myTimeInput").value;
+  var inputTimeValue = document.getElementById("signleTIme").value;
   var inputTaskValue = document.getElementById("myTaskInput").value;
+  var inputDateValue = document.getElementById("start").value;
+  var space = " ";
   var time = document.createTextNode(inputTimeValue);
   var t = document.createTextNode(inputTaskValue);
+  var date = document.createTextNode(inputDateValue);
+  var spaceN = document.createTextNode(space);
+  var spaceN2 = document.createTextNode(space);
   
-  li.appendChild(time);
-  if (inputTimeValue === '') {
-    alert("You haven't added the time, please check.");
-  }
-  else {
-    document.getElementById("myUL").appendChild(li);
-  }
   
-  li.appendChild(t);
 
   if (inputTaskValue === '') {
-    alert("You must add task name!");
+    alert("Please add task name");
   } else {
+    li.appendChild(time);
+
+    li.appendChild(spaceN2);
+
+    li.appendChild(t);
+
+    li.appendChild(spaceN);
+
+    li.appendChild(date);
     document.getElementById("myUL").appendChild(li);
   }
 
   document.getElementById("myTaskInput").value = "";
-  document.getElementById("myTimeInput").value = "";
+  document.getElementById("signleTIme").value = "";
+  document.getElementById("start").value = "";
   
 
   var span = document.createElement("SPAN");

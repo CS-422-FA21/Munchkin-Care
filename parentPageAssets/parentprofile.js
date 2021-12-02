@@ -6,7 +6,7 @@ function closeForm()    { document.getElementById("popUP").style.display = "none
 
 function closeConfirm() { 
     document.getElementById("confirm-popup").style.display = "none"; 
-    window.open("newChild.html",     "_self");
+    window.open("newChild.html", "_self");
 }
 
 function overheadPopup(){
@@ -19,9 +19,8 @@ function confirmChildAdd() {
     document.getElementById("confirm-popup").style.display = "block";
 }
 
-function errorPage()    { window.open("p_reviews.html",     "_self"); }
+function errorPage()    { window.open("errorPage.html",     "_self"); }
 function homePage()     { window.open("index.html",         "_self"); }
 function msgPage()      { window.open("messages.html",      "_self"); }
 function parentPage()   { window.open("parentProfile.html", "_self"); }
-function reviewsPage()  { window.open("parentPageAssets/reviews.html",     "_self"); }
-function caregiverPage()   { window.open("caregiverProfile.html", "_self"); }
+function reviewsPage()  { window.open("p_reviews.html",     "_self"); }
