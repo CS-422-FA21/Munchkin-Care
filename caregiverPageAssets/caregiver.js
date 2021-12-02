@@ -48,3 +48,5 @@ function confrimPopup(){
     document.getElementById("single").style.display = "none";
     document.getElementById("confirmation").style.display = "block";
 }
+
+function reviewsPage() { window.open("cg_reviews.html", "_self"); }
