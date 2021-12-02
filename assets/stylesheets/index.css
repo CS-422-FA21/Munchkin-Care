@@ -1,5 +1,11 @@
-body{
-    background: #f5f5f5;
+body.index{
+    background:rgba(134,21,174,0.1);
+}
+.content .col-md-3.right-side{
+    padding-left: 0;
+}
+iframe{
+    max-width: 100%;;
 }
 .navigation{
     display: flex;
@@ -19,7 +25,7 @@ body{
 .navigation .logo-main{
     margin: 0 auto;
     color: rgba(134,21,174,1);
-    font-size: 36px;
+    font-size: 50px;
     width: fit-content;
     font-family: 'Crafty Girls', sans-serif;
 }
@@ -57,11 +63,15 @@ body{
     height: 40px;
     padding: 5px 10px;
 }
-.navigation .info-container{
+.navigation .info-container,
+#toolbar{
     position: absolute;
     right: 20px;
-    top: 0;
+    top: -13px;
     cursor: pointer;
+    font-size: 50px;
+    color: #000;
+    line-height: 50px;
 }
 .search-bar .search-options-container{
     position: absolute;
@@ -73,8 +83,9 @@ body{
     overflow: hidden;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
-    opacity: 0;
-    visibility: hidden;
+    display: none;
+    /* opacity: 0; */
+    /* visibility: hidden; */
     transition: opacity 0.2s ease-in-out;
 }
 .search-bar input:focus ~ .search-options-container{
@@ -100,6 +111,7 @@ body{
     padding: 15px;
     border-radius: 4px;
     height: fit-content;
+    background: #f5f5f5;
 }
 
 .calendar-widget .share-icon{
@@ -115,12 +127,21 @@ body{
     box-shadow: 0 2px 8px 4px rgb(0 0 0 / 10%);
     padding: 15px;
     border-radius: 4px;
+    background: #f5f5f5;
 }
-.favorites-widget{
+.favorites-widget,.updates-widget{
     box-shadow: 0 2px 8px 4px rgb(0 0 0 / 10%);
     padding: 15px;
     border-radius: 4px;
     height: fit-content;
+    background: #f5f5f5;
+}
+.updates-widget{
+    margin-top: 25px;
+}
+.updates-widget .short-desc{
+    font-size: 16px;
+    padding: 20px;
 }
 .widget-title{
     font-size: 20px;
@@ -130,6 +151,11 @@ body{
     padding-bottom: 2px;
     display: flex;
     align-items: center;
+    line-height: 1;
+}
+.widget-title i{
+    margin-left: auto;
+    font-size: 32px;;
 }
 .widget-title img{
     height: 30px;
@@ -147,7 +173,7 @@ body{
 .calendar-widget .share-icon:hover,
 .search-bar .search-option:hover,
 .share-options-container .share-option:hover{
-    background:rgba(134,21,174,0.1);
+    background:rgba(134,21,174,0.3);
 }
 .upcoming-event .title,
 .favorite .title{
@@ -254,3 +280,34 @@ body{
 }
 
 /* Utility Classes */
+
+
+@media only screen and (max-width: 760px) {
+    .navigation .logo-main{
+        font-size: 36px;
+    }
+    .search-bar{
+        width: 40%;
+        margin-left: 18px;
+    }
+    #toolbar{
+        top: -3px;
+        right: 20px;
+        font-size: 36px;
+        line-height: 36px;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .upcoming-event-widget, .calendar-widget, .col-md-3.right-side{
+        margin: 10px 0;
+    }
+    .upcoming-event-widget{
+        max-height: 240px;
+        overflow: auto;
+    }
+    iframe{
+        max-width: 330px !important;
+    }
+    
+  }

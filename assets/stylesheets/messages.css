@@ -1,5 +1,11 @@
+body.messages{
+    background:rgba(134,21,174,0.1);
+}
 .messages .navigation{
     padding: 5px 0;
+}
+.messages #toolbar{
+    top: -65px;
 }
 .messages .navigation .row{
     max-width: 1440px;
@@ -32,6 +38,9 @@
 }
 .contact-list .contact-card:hover{
     background:rgba(134,21,174,0.1);
+}
+.contact-list .contact-card.active{
+    background:rgba(134,21,174,0.5);
 }
 .contact-list .contact-card .name{
     font-size: 22px;
@@ -66,6 +75,7 @@
     box-shadow: 0 2px 2px 2px rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .message-action-container .title img{
     height: 40px;
@@ -92,6 +102,10 @@
     width: 15%;
     display: flex;
     cursor: pointer;
+    padding: 10px 0;
+}
+.message-action-container .controls .booking-icon:hover{
+    background: rgba(134,21,174,0.1);
 }
 .message-action-container .controls .input-control{
     display: flex;
@@ -154,4 +168,28 @@
 .message-action-container .overlay-initial img{
     height: 120px;
     transform: rotate(120deg);
+}
+.add-contact-btn{
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.add-contact-btn .title{
+    padding-left: 40px;
+    display: flex;
+    font-size: 20px;
+    color: #000;
+    height: 45px;
+    line-height: 45px;
+    text-decoration: underline;
+    cursor: pointer;
+    border-top: 1px solid #cecece;
+}
+.add-contact-btn .title i{
+    margin-right: 20px;
+    margin-left: auto;
+}
+.add-contact-btn .title:hover{
+    background: rgba(134,21,174,0.3);
 }
